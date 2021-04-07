@@ -49,7 +49,7 @@ public class scr_platformerMovement : MonoBehaviour
 
         if (collision.CompareTag("FinishLine"))
         {
-            SceneManager.LoadScene("Scene3");
+            SceneManager.LoadScene("Scene4");
         }
 
     }

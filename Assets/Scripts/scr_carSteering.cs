@@ -16,7 +16,6 @@ public class scr_carSteering : MonoBehaviour
     //Counter for Coin Collecting
     int count = 0;
 
-    public string sceneToLoad;
 
     void Start()
     {
@@ -46,7 +45,7 @@ public class scr_carSteering : MonoBehaviour
 
         if (collision.CompareTag("FinishLine") && count == 2)
         {
-            SceneManager.LoadScene(sceneToLoad);
+            SceneManager.LoadScene("Scene5");
         }
     }
 }
