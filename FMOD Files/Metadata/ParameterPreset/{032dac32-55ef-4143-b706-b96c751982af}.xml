@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{032dac32-55ef-4143-b706-b96c751982af}">
+		<property name="name">
+			<value>Minigame</value>
+		</property>
+		<relationship name="folder">
+			<destination>{6444f2a6-60fd-429b-9c31-b53ee7fd4e55}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{953b3bc8-185b-4ed6-9592-63c67f7d53e5}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{953b3bc8-185b-4ed6-9592-63c67f7d53e5}">
+		<property name="maximum">
+			<value>5</value>
+		</property>
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>

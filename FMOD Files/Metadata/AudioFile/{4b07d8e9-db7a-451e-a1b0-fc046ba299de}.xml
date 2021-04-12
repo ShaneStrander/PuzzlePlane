@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{4b07d8e9-db7a-451e-a1b0-fc046ba299de}">
+		<property name="assetPath">
+			<value>Racing theme.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>24</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{8709536e-3ef8-40e3-a1bf-6a2eb4e6b3da}</destination>
+		</relationship>
+	</object>
+</objects>
