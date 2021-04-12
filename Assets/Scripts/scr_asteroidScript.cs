@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class scr_asteroidScript : MonoBehaviour
 {
@@ -15,6 +17,11 @@ public class scr_asteroidScript : MonoBehaviour
     public GameObject asteroidMedium;
     public int points;
     public GameObject player;
+    static Text scoreText;
+    //Counter for score
+    static int count = 0;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -24,9 +31,13 @@ public class scr_asteroidScript : MonoBehaviour
         float torque = Random.Range(-maxTorque, maxTorque);
         rb.AddForce(thrust);
         rb.AddTorque(torque);
+        if (scoreText == null)
+        {
+            
+            scoreText = GameObject.Find("ScoreText").GetComponentInChildren<Text>();
+        }
+        // player = GameObject.FindWithTag("Player").GetComponent<scr_spaceshipControls>();
 
-       // player = GameObject.FindWithTag("Player").GetComponent<scr_spaceshipControls>();
-        
     }
 
     // Update is called once per frame
@@ -59,6 +70,8 @@ public class scr_asteroidScript : MonoBehaviour
 
     }
 
+
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("bullet"))
@@ -73,15 +86,23 @@ public class scr_asteroidScript : MonoBehaviour
                 asteroid1.GetComponent<scr_asteroidScript>().asteroidSize = 1;
                 asteroid2.GetComponent<scr_asteroidScript>().asteroidSize = 1;
 
+                count = +2;
                 
             }else if (asteroidSize == 1)
             {
-
+                count += 1;
             }
             //player.ScorePoints(points);
 
             Destroy(gameObject);
 
+           
+            scoreText.text = "Score: " + count.ToString();
+
+            if (count == 10)
+            {
+                SceneManager.LoadScene("Scene2");
+            }
 
         }
 

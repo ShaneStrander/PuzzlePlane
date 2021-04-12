@@ -300,7 +300,7 @@ GameObject:
   - component: {fileID: 451431311}
   - component: {fileID: 451431310}
   m_Layer: 5
-  m_Name: Score
+  m_Name: ScoreText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -678,7 +678,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 2554d16e4c6d56846a49a371e521d713, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -727,8 +727,9 @@ MonoBehaviour:
   deathForce: 0
   bullet: {fileID: 3477436588953104793, guid: 78e47d29aa09d2c4190dead288313ad9, type: 3}
   lives: 3
-  scoreText: {fileID: 451431310}
   livesText: {fileID: 1709129296}
+  accPower: 5
+  steeringPower: 5
 --- !u!70 &973868866
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
