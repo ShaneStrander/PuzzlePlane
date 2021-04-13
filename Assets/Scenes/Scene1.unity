@@ -18770,7 +18770,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5711663814184559162, guid: d34230c9f2c2b2c469412ec38171e498, type: 3}
       propertyPath: sceneToLoad
-      value: Scene2
+      value: SceneAsteroids
       objectReference: {fileID: 0}
     - target: {fileID: 5711663814184559163, guid: d34230c9f2c2b2c469412ec38171e498, type: 3}
       propertyPath: m_Name

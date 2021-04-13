@@ -8,6 +8,7 @@ TagManager:
   - RedCoin
   - FinishLine
   - Platform
+  - bullet
   layers:
   - Default
   - TransparentFX

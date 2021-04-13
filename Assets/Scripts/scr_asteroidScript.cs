@@ -99,7 +99,7 @@ public class scr_asteroidScript : MonoBehaviour
            
             scoreText.text = "Score: " + count.ToString();
 
-            if (count == 10)
+            if (count == 6)
             {
                 SceneManager.LoadScene("Scene2");
             }

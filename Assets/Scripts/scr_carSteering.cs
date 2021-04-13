@@ -16,10 +16,12 @@ public class scr_carSteering : MonoBehaviour
     //Counter for Coin Collecting
     int count = 0;
 
+    scr_randSpawn spawn;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        spawn = GameObject.Find("Map").GetComponent<scr_randSpawn>();
     }
 
     void FixedUpdate()
@@ -41,9 +43,13 @@ public class scr_carSteering : MonoBehaviour
         {
             Destroy(collision.gameObject);
             count = count + 1;
+            if(count < spawn.numToSpawn)
+            {
+                spawn.Spawn(1);
+            }
         }
 
-        if (collision.CompareTag("FinishLine") && count == 2)
+        if (collision.CompareTag("FinishLine") && count == spawn.numToSpawn)
         {
             SceneManager.LoadScene("Scene5");
         }
