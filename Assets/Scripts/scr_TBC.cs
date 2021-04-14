@@ -37,11 +37,14 @@ public class scr_TBC : MonoBehaviour
             if(currentHealth >= 0)
             {
                 Debug.Log("PLAYER WINS");
+                FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Minigame", 0);
+                FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Progress", 1);
                 SceneManager.LoadScene("Scene3");
             }
             else
             {
                 Debug.Log("ENEMY WINS");
+                FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Minigame", 0);
                 SceneManager.LoadScene("Scene2");
             }
         }
