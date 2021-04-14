@@ -86,11 +86,11 @@ public class scr_asteroidScript : MonoBehaviour
                 asteroid1.GetComponent<scr_asteroidScript>().asteroidSize = 1;
                 asteroid2.GetComponent<scr_asteroidScript>().asteroidSize = 1;
 
-                count = +2;
+                count ++;
                 
             }else if (asteroidSize == 1)
             {
-                count += 1;
+                count ++;
             }
             //player.ScorePoints(points);
 
