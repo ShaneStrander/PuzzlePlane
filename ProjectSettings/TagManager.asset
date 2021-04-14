@@ -8,6 +8,7 @@ TagManager:
   - RedCoin
   - FinishLine
   - Platform
+  - bullet
   layers:
   - Default
   - TransparentFX
@@ -21,7 +22,7 @@ TagManager:
   - objects
   - player
   - walls
-  - 
+  - objects2
   - 
   - 
   - 
@@ -47,6 +48,9 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 3221150355
+    locked: 0
+  - name: objects2
+    uniqueID: 1874746035
     locked: 0
   - name: Objects
     uniqueID: 2642319859
