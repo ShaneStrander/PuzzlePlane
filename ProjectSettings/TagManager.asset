@@ -9,6 +9,7 @@ TagManager:
   - FinishLine
   - Platform
   - bullet
+  - FinishLine2
   layers:
   - Default
   - TransparentFX
@@ -23,7 +24,7 @@ TagManager:
   - player
   - walls
   - objects2
-  - 
+  - platforms
   - 
   - 
   - 
