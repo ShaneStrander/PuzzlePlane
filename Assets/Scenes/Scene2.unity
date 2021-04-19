@@ -144,6 +144,68 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.6997013}
   serializedVersion: 2
   m_Radius: 0.30486107
+--- !u!1001 &407696487
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7779178189737210960, guid: 3496f1d3bc5b0e146942101000279c63, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 7779178189737210960, guid: 3496f1d3bc5b0e146942101000279c63, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 7779178189737210960, guid: 3496f1d3bc5b0e146942101000279c63, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7779178189737210960, guid: 3496f1d3bc5b0e146942101000279c63, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7779178189737210960, guid: 3496f1d3bc5b0e146942101000279c63, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7779178189737210960, guid: 3496f1d3bc5b0e146942101000279c63, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7779178189737210960, guid: 3496f1d3bc5b0e146942101000279c63, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7779178189737210960, guid: 3496f1d3bc5b0e146942101000279c63, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7779178189737210960, guid: 3496f1d3bc5b0e146942101000279c63, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7779178189737210960, guid: 3496f1d3bc5b0e146942101000279c63, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7779178189737210960, guid: 3496f1d3bc5b0e146942101000279c63, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7779178189737210971, guid: 3496f1d3bc5b0e146942101000279c63, type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3496f1d3bc5b0e146942101000279c63, type: 3}
+--- !u!4 &407696488 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7779178189737210960, guid: 3496f1d3bc5b0e146942101000279c63, type: 3}
+  m_PrefabInstance: {fileID: 407696487}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &525894052
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -210,7 +272,7 @@ PrefabInstance:
     - target: {fileID: 5305961070343172323, guid: e68ae77e4479094469c1dfb244c3b6e8, type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 1489072906}
+      objectReference: {fileID: 407696488}
     - target: {fileID: 5305961070343172323, guid: e68ae77e4479094469c1dfb244c3b6e8, type: 3}
       propertyPath: offset.x
       value: 0
@@ -672,11 +734,6 @@ MonoBehaviour:
   parameter: Minigame
   TriggerEvent: 5
   value: 1
---- !u!4 &1489072906 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6939236639662846977, guid: af6ee5a7ecfc2764f8c0445e39216c82, type: 3}
-  m_PrefabInstance: {fileID: 6939236638996023051}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1857139872
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15474,6 +15531,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6939236639662846989, guid: af6ee5a7ecfc2764f8c0445e39216c82, type: 3}
       propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6939236639662846989, guid: af6ee5a7ecfc2764f8c0445e39216c82, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
