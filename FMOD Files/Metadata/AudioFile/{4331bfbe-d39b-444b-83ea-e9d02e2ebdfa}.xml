@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{4331bfbe-d39b-444b-83ea-e9d02e2ebdfa}">
+		<property name="assetPath">
+			<value>asteroids theme.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>60</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{8709536e-3ef8-40e3-a1bf-6a2eb4e6b3da}</destination>
+		</relationship>
+	</object>
+</objects>
