@@ -43,7 +43,7 @@ public class scr_TBCenemy : MonoBehaviour
     {
         while (true)
         {
-            if (turnTemp > 0)
+            if (turnTemp % 2 != 0)
             {
                 yield return new WaitForSeconds(3);
 
