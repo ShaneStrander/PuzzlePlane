@@ -10,6 +10,7 @@ public class scr_platformerMovement : MonoBehaviour
     private float moveInput;
 
     private Rigidbody2D rb;
+    private SpriteRenderer mySpriteRenderer;
 
     private bool isGrounded;
     public Transform groundCheck;
@@ -19,6 +20,7 @@ public class scr_platformerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        mySpriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void FixedUpdate()
@@ -26,6 +28,15 @@ public class scr_platformerMovement : MonoBehaviour
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
         moveInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
+
+        if (moveInput >= 0)
+        {
+            mySpriteRenderer.flipX = false;
+        }
+        else
+        {
+            mySpriteRenderer.flipX = true;
+        }
     }
 
     void Update()
