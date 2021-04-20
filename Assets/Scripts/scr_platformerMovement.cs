@@ -58,6 +58,8 @@ public class scr_platformerMovement : MonoBehaviour
         }
         if (collision.CompareTag("FinishLine2"))
         {
+            FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Minigame", 0);
+            FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Progress", 3);
             SceneManager.LoadScene("Scene4");
         }
     }

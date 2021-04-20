@@ -101,6 +101,8 @@ public class scr_asteroidScript : MonoBehaviour
 
             if (count == 6)
             {
+                FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Minigame", 0);
+                FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Progress", 1);
                 SceneManager.LoadScene("Scene2");
             }
 
