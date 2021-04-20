@@ -116,6 +116,7 @@ public class scr_spaceshipControls : MonoBehaviour
             livesText.text = "Lives: " +  lives;
             if (lives <= 0)
             {
+                FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Minigame", 0);
                 SceneManager.LoadScene("Scene1");
             }
         }

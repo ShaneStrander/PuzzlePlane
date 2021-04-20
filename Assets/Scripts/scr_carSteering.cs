@@ -51,6 +51,8 @@ public class scr_carSteering : MonoBehaviour
 
         if (collision.CompareTag("FinishLine") && count == spawn.numToSpawn)
         {
+            FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Minigame", 5);
+            FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Progress", 3);
             SceneManager.LoadScene("Scene5");
         }
     }
