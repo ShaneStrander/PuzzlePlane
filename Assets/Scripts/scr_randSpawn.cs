@@ -12,10 +12,10 @@ public class scr_randSpawn : MonoBehaviour
 
     void Start()
     {
-        position = new Vector3(Random.Range(-5.0f, 5F), Random.Range(-2.0F, 2.0F), -3);
+        position = new Vector3(Random.Range(-7.0f, 7F), Random.Range(-2.5F, 2.5F), -3);
         Instantiate(blueCoin, position, Quaternion.identity);
 
-        position = new Vector3(Random.Range(-5.0f, 5F), Random.Range(-2.0F, 2.0F), -3);
+        position = new Vector3(Random.Range(-7.0f, 7F), Random.Range(-2.5F, 2.5F), -3);
         Instantiate(redCoin, position, Quaternion.identity);
     }
 
