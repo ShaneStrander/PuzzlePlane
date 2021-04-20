@@ -313,13 +313,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 260781997}
-  m_LocalRotation: {x: 0, y: 0, z: -0.8578856, w: 0.5138408}
-  m_LocalPosition: {x: -8.04, y: 2.5, z: -2}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -7.5, y: 2.5, z: -2}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -118.16}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!50 &260782000
 Rigidbody2D:
   serializedVersion: 4
@@ -714,7 +714,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1005861750}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -7.78, y: -3.23, z: -2}
+  m_LocalPosition: {x: -7.5, y: -3.23, z: -2}
   m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children: []
   m_Father: {fileID: 0}
@@ -931,8 +931,8 @@ EdgeCollider2D:
   m_Points:
   - {x: 9.549625, y: -5.3631296}
   - {x: 9.461531, y: -5.35286}
-  - {x: -9.585493, y: -5.3795714}
-  - {x: -9.57507, y: 5.3992977}
+  - {x: -9.0372505, y: -5.331433}
+  - {x: -8.933227, y: 5.3992977}
   - {x: 9.598787, y: 5.3963346}
   - {x: 9.565241, y: -5.2685986}
   - {x: 9.564349, y: -5.3690453}

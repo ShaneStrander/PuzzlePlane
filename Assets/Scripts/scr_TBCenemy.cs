@@ -49,7 +49,7 @@ public class scr_TBCenemy : MonoBehaviour
     {
         Debug.Log("ENEMY Basic Attack");
         int damage = Random.Range(8, 13);
-        GameObject.Find("PlayerTemp").GetComponent<scr_TBC>().TakeDamage(damage);
+        GameObject.Find("TBCplayer").GetComponent<scr_TBC>().TakeDamage(damage);
     }
 
     public void EnemyMagicAttack()
@@ -59,7 +59,7 @@ public class scr_TBCenemy : MonoBehaviour
         {
             Debug.Log("ENEMY Magic Attack");
             int damage = Random.Range(13, 17);
-            GameObject.Find("PlayerTemp").GetComponent<scr_TBC>().TakeDamage(damage);
+            GameObject.Find("TBCplayer").GetComponent<scr_TBC>().TakeDamage(damage);
         }
         else
         {
