@@ -62,6 +62,7 @@ public class scr_raceEnemy : MonoBehaviour
         if (collision.CompareTag("FinishLine") && enemyCount == spawn.numToSpawn)
         {
             //Debug.Log("You Lose");
+            FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Minigame", 0);
             SceneManager.LoadScene("Scene4");
         }
 

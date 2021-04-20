@@ -38,7 +38,7 @@ public class scr_TBC : MonoBehaviour
             {
                 Debug.Log("PLAYER WINS");
                 FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Minigame", 0);
-                FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Progress", 1);
+                FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Progress", 2);
                 SceneManager.LoadScene("Scene3");
             }
             else

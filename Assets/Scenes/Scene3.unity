@@ -17798,8 +17798,30 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 1.9637389
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 530633035, guid: d34230c9f2c2b2c469412ec38171e498, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d34230c9f2c2b2c469412ec38171e498, type: 3}
+--- !u!1 &611564662 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5711663814184559163, guid: d34230c9f2c2b2c469412ec38171e498, type: 3}
+  m_PrefabInstance: {fileID: 611564661}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &611564663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611564662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Player
+  parameter: Minigame
+  TriggerEvent: 5
+  value: 2
 --- !u!1001 &1150932445
 PrefabInstance:
   m_ObjectHideFlags: 0

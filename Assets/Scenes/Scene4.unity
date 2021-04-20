@@ -587,6 +587,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 530633035, guid: d34230c9f2c2b2c469412ec38171e498, type: 3}
+      propertyPath: parameter
+      value: Minigame
+      objectReference: {fileID: 0}
+    - target: {fileID: 530633035, guid: d34230c9f2c2b2c469412ec38171e498, type: 3}
+      propertyPath: value
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5711663814184559162, guid: d34230c9f2c2b2c469412ec38171e498, type: 3}
       propertyPath: sceneToLoad
       value: SceneRugRace
