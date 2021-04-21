@@ -20,8 +20,8 @@ public class scr_TBCenemy : MonoBehaviour
 
     //Scaling for animations
     float scaleRate = 0.15f;
-    float minScale = 3f;
-    float maxScale = 3.8f;
+    float minScale = .3f;
+    float maxScale = .6f;
 
     bool damageDealt = false;
     bool attacking = false;
@@ -54,7 +54,7 @@ public class scr_TBCenemy : MonoBehaviour
         //Taking damage
         if (damageDealt)
         {
-            transform.localScale += new Vector3(3f, 3f, 3f) * scaleRate;
+            transform.localScale += new Vector3(.3f, .3f, .3f) * scaleRate;
             if (transform.localScale.y < minScale)
             {
                 damageDealt = false;

@@ -28,7 +28,7 @@ public class scr_carSteering : MonoBehaviour
     {
         steeringAmount = - Input.GetAxis("Horizontal");
         speed = Input.GetAxis("Vertical") * accPower;
-        direction = Mathf.Sign(Vector2.Dot(rb.velocity, rb.GetRelativeVector(Vector2.up)));
+        direction = Mathf.Sin(Vector2.Dot(rb.velocity, rb.GetRelativeVector(Vector2.up)));
         rb.rotation += steeringAmount * steeringPower * rb.velocity.magnitude * direction;
 
         rb.AddRelativeForce(Vector2.up * speed);

@@ -4,9 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+
 public class scr_spaceshipControls : MonoBehaviour
 {
-    public Rigidbody2D rb; 
+    public Rigidbody2D rb;
     public float thrust;
     public float turnThrust;
     private float thrustInput;
@@ -20,28 +21,20 @@ public class scr_spaceshipControls : MonoBehaviour
 
     public GameObject bullet;
 
-    //private int score;
+    private int score;
     public int lives;
 
-
+    public Text scoreText;
 
     public Text livesText;
-
-    [SerializeField]
-    float accPower = 5f;
-    [SerializeField]
-    float steeringPower = 5f;
-    float steeringAmount, speed, direction;
-
-   
 
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
-        
+        score = 0;
+        scoreText.text = "Score: " + score;
         livesText.text = "Lives: " + lives;
     }
 
@@ -49,8 +42,8 @@ public class scr_spaceshipControls : MonoBehaviour
     void Update()
     {
         //check input from the keyboard 
-        //thrustInput = Input.GetAxis("Vertical");
-        //turnInput = Input.GetAxis("Horizontal");
+        thrustInput = Input.GetAxis("Vertical");
+        turnInput = - Input.GetAxis("Horizontal");
 
         //check for input from the fire key and make bullets
         if (Input.GetButtonDown("Fire1"))
@@ -61,11 +54,11 @@ public class scr_spaceshipControls : MonoBehaviour
         }
 
         //rotate  the ship
-        //transform.Rotate(Vector3.forward * turnInput * Time.deltaTime * turnThrust);
+        transform.Rotate(Vector3.forward * turnInput * Time.deltaTime * turnThrust);
 
         Vector2 newPos = transform.position;
         //screen wrapping
-        if(transform.position.y> screenTop)
+        if (transform.position.y > screenTop)
         {
             newPos.y = screenBottom;
         }
@@ -74,7 +67,7 @@ public class scr_spaceshipControls : MonoBehaviour
         {
             newPos.y = screenTop;
         }
-        
+
         if (transform.position.x > screenRight)
         {
             newPos.x = screenLeft;
@@ -91,29 +84,23 @@ public class scr_spaceshipControls : MonoBehaviour
 
     void FixedUpdate()
     {
-
-        steeringAmount = -Input.GetAxis("Horizontal");
-        speed = Input.GetAxis("Vertical") * accPower;
-        direction = Mathf.Sign(Vector2.Dot(rb.velocity, rb.GetRelativeVector(Vector2.up)));
-        rb.rotation += steeringAmount * steeringPower * rb.velocity.magnitude * direction;
-
-        rb.AddRelativeForce(Vector2.up * speed);
-
-        rb.AddRelativeForce(-Vector2.right * rb.velocity.magnitude * steeringAmount / 2);
-
-        //rb.AddRelativeForce(Vector2.up * thrustInput * thrust);
+        rb.AddRelativeForce(Vector2.up * thrustInput * thrust);
         //rb.AddTorque(-turnInput * thrust);
 
     }
 
-
+    void ScorePoints(int pointsToAdd)
+    {
+        score += pointsToAdd;
+        scoreText.text = "Score: " + score;
+    }
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        if(col.relativeVelocity.magnitude > deathForce)
+        if (col.relativeVelocity.magnitude > deathForce)
         {
             lives--;
-            livesText.text = "Lives: " +  lives;
+            livesText.text = "Lives: " + lives;
             if (lives <= 0)
             {
                 FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Minigame", 0);
@@ -121,9 +108,6 @@ public class scr_spaceshipControls : MonoBehaviour
             }
         }
 
-
-
-      
     }
 
 }
