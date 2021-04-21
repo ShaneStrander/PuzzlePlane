@@ -25,6 +25,7 @@ public class scr_TBC : MonoBehaviour
 
     //Was damage dealt
     bool damageDealt = false;
+    bool attacking = false;
 
     scr_TBCenemy enemy;
 
@@ -77,6 +78,7 @@ public class scr_TBC : MonoBehaviour
     //Animation Helper
     void FixedUpdate()
     {
+        //Taking damage
         if (damageDealt)
         {
             transform.localScale += new Vector3(.5f, .5f, .5f) * scaleRate;
@@ -84,6 +86,20 @@ public class scr_TBC : MonoBehaviour
             {
                 damageDealt = false;
             }
+        }
+
+        //Attacking
+        if (attacking)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, new Vector3(-4f, 0f, 0f), 8 * Time.deltaTime);
+            if (transform.position.x >= -4f)
+            {
+                attacking = false;
+            }
+        }
+        else
+        {
+            transform.position = Vector3.MoveTowards(transform.position, new Vector3(-5f, 0f, 0f), 8 * Time.deltaTime);
         }
     }
 
@@ -103,7 +119,8 @@ public class scr_TBC : MonoBehaviour
             int damage = Random.Range(8, 13);
             enemy.EnemyTakeDamage(damage);
             turn = turn + 1;
-            txt.text = "Your basic attack delt " + damage.ToString() + " damage!";
+            txt.text = "Your basic attack dealt " + damage.ToString() + " damage!";
+            attacking = true;
         }
     }
 
@@ -117,7 +134,8 @@ public class scr_TBC : MonoBehaviour
             {
                 int damage = Random.Range(13, 17);
                 enemy.EnemyTakeDamage(damage);
-                txt.text = "Your magic attack delt " + damage.ToString() + " damage!";
+                txt.text = "Your magic attack dealt " + damage.ToString() + " damage!";
+                attacking = true;
             }
             else
             {

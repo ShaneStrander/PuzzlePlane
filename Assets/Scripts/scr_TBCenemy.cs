@@ -24,6 +24,7 @@ public class scr_TBCenemy : MonoBehaviour
     float maxScale = 3.8f;
 
     bool damageDealt = false;
+    bool attacking = false;
 
 
     void Start()
@@ -50,6 +51,7 @@ public class scr_TBCenemy : MonoBehaviour
     //Animation Helper
     void FixedUpdate()
     {
+        //Taking damage
         if (damageDealt)
         {
             transform.localScale += new Vector3(3f, 3f, 3f) * scaleRate;
@@ -57,6 +59,20 @@ public class scr_TBCenemy : MonoBehaviour
             {
                 damageDealt = false;
             }
+        }
+
+        //Attacking
+        if (attacking)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, new Vector3(4f, 0f, 0f), 8 * Time.deltaTime);
+            if (transform.position.x <= 4f)
+            {
+                attacking = false;
+            }
+        }
+        else
+        {
+            transform.position = Vector3.MoveTowards(transform.position, new Vector3(5f, 0f, 0f), 8 * Time.deltaTime);
         }
     }
 
@@ -104,7 +120,8 @@ public class scr_TBCenemy : MonoBehaviour
     {
         int damage = Random.Range(8, 13);
         GameObject.Find("TBCplayer").GetComponent<scr_TBC>().TakeDamage(damage);
-        txt.text = "The enemy's basic attack delt " + damage.ToString() + " damage";
+        txt.text = "The enemy's basic attack dealt " + damage.ToString() + " damage";
+        attacking = true;
     }
 
     public void EnemyMagicAttack()
@@ -114,7 +131,8 @@ public class scr_TBCenemy : MonoBehaviour
         {
             int damage = Random.Range(13, 17);
             GameObject.Find("TBCplayer").GetComponent<scr_TBC>().TakeDamage(damage);
-            txt.text = "The enemy's magic attack delt " + damage.ToString() + " damage";
+            txt.text = "The enemy's magic attack dealt " + damage.ToString() + " damage";
+            attacking = true;
         }
         else
         {
