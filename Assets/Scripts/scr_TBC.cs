@@ -12,13 +12,23 @@ public class scr_TBC : MonoBehaviour
     public int currentHealth;
     public scr_healthBar healthBar;
 
+    //Turn Counter
     public int turn = 0;
 
     //For Updating PlayByPlay
     public Text txt;
 
+    //Scaling for animations
+    float scaleRate = 0.15f;
+    float minScale = 0.5f;
+    float maxScale = 0.8f;
+
+    //Was damage dealt
+    bool damageDealt = false;
+
     scr_TBCenemy enemy;
-    
+
+
     void Start()
     {
         currentHealth = maxHealth;
@@ -29,16 +39,25 @@ public class scr_TBC : MonoBehaviour
 
     void Update()
     {
-        if(currentHealth >= 0 && enemy.enemyCurrentHealth >= 0)
+        if (transform.localScale.x < minScale)
         {
-            if(turn % 2 != 0)
+            scaleRate = Mathf.Abs(scaleRate);
+        }
+        else if (transform.localScale.x > maxScale)
+        {
+            scaleRate = -Mathf.Abs(scaleRate);
+        }
+
+        if (currentHealth >= 0 && enemy.enemyCurrentHealth >= 0)
+        {
+            if (turn % 2 != 0)
             {
                 enemy.ChooseEnemyMove();
             }
         }
         else
         {
-            if(currentHealth >= 0)
+            if (currentHealth >= 0)
             {
                 txt.text = "You Win!";
                 FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Minigame", 0);
@@ -52,7 +71,20 @@ public class scr_TBC : MonoBehaviour
                 SceneManager.LoadScene("Scene2");
             }
         }
-        
+
+    }
+
+    //Animation Helper
+    void FixedUpdate()
+    {
+        if (damageDealt)
+        {
+            transform.localScale += new Vector3(.5f, .5f, .5f) * scaleRate;
+            if (transform.localScale.y < minScale)
+            {
+                damageDealt = false;
+            }
+        }
     }
 
     // Takes damage and updates health bar
@@ -60,6 +92,7 @@ public class scr_TBC : MonoBehaviour
     {
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
+        damageDealt = true;
     }
 
     //Basic attack

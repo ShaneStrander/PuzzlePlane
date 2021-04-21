@@ -18,6 +18,13 @@ public class scr_TBCenemy : MonoBehaviour
 
     int turnTemp;
 
+    //Scaling for animations
+    float scaleRate = 0.15f;
+    float minScale = 3f;
+    float maxScale = 3.8f;
+
+    bool damageDealt = false;
+
 
     void Start()
     {
@@ -30,6 +37,27 @@ public class scr_TBCenemy : MonoBehaviour
     void Update()
     {
         turnTemp = GameObject.Find("TBCplayer").GetComponent<scr_TBC>().turn;
+        if (transform.localScale.x < minScale)
+        {
+            scaleRate = Mathf.Abs(scaleRate);
+        }
+        else if (transform.localScale.x > maxScale)
+        {
+            scaleRate = -Mathf.Abs(scaleRate);
+        }
+    }
+
+    //Animation Helper
+    void FixedUpdate()
+    {
+        if (damageDealt)
+        {
+            transform.localScale += new Vector3(3f, 3f, 3f) * scaleRate;
+            if (transform.localScale.y < minScale)
+            {
+                damageDealt = false;
+            }
+        }
     }
 
 
@@ -37,6 +65,7 @@ public class scr_TBCenemy : MonoBehaviour
     {
         enemyCurrentHealth -= damage;
         enemyHealthBar.SetHealth(enemyCurrentHealth);
+        damageDealt = true;
     }
 
     public IEnumerator ChooseEnemyMove()
@@ -61,7 +90,7 @@ public class scr_TBCenemy : MonoBehaviour
                     EnemyHeal();
                 }
 
-                yield return new WaitForSeconds(2);
+                yield return new WaitForSeconds(1);
 
                 turnTemp = turnTemp + 1;
                 GameObject.Find("TBCplayer").GetComponent<scr_TBC>().turn = turnTemp;
