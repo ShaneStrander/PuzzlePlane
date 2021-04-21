@@ -690,10 +690,10 @@
 			<value>24</value>
 		</property>
 		<property name="volume">
-			<value>-4</value>
+			<value>-10</value>
 		</property>
 		<relationship name="audioFile">
-			<destination>{911e140e-a46c-4120-9411-ba7e33594c48}</destination>
+			<destination>{0b4fcaf2-4bba-4c67-b408-a234dc730d7d}</destination>
 		</relationship>
 	</object>
 	<object class="TransitionSourceSound" id="{2df54c58-5f69-484d-81d5-963c55e75530}">
@@ -971,10 +971,10 @@
 			<value>24</value>
 		</property>
 		<property name="volume">
-			<value>-4</value>
+			<value>-10</value>
 		</property>
 		<relationship name="audioFile">
-			<destination>{911e140e-a46c-4120-9411-ba7e33594c48}</destination>
+			<destination>{0b4fcaf2-4bba-4c67-b408-a234dc730d7d}</destination>
 		</relationship>
 	</object>
 	<object class="TransitionSourceSound" id="{e17a8797-565d-4807-b9f7-025cbac911ef}">
@@ -1246,10 +1246,10 @@
 			<value>24</value>
 		</property>
 		<property name="volume">
-			<value>-4</value>
+			<value>-10</value>
 		</property>
 		<relationship name="audioFile">
-			<destination>{911e140e-a46c-4120-9411-ba7e33594c48}</destination>
+			<destination>{0b4fcaf2-4bba-4c67-b408-a234dc730d7d}</destination>
 		</relationship>
 	</object>
 	<object class="TransitionSourceSound" id="{ea358d72-03fd-4fb2-a60a-ee4fc4c04155}">
@@ -1521,10 +1521,10 @@
 			<value>24</value>
 		</property>
 		<property name="volume">
-			<value>-4</value>
+			<value>-10</value>
 		</property>
 		<relationship name="audioFile">
-			<destination>{911e140e-a46c-4120-9411-ba7e33594c48}</destination>
+			<destination>{0b4fcaf2-4bba-4c67-b408-a234dc730d7d}</destination>
 		</relationship>
 	</object>
 	<object class="TransitionSourceSound" id="{c868345d-e592-4ccb-832b-e099c14b139e}">
