@@ -55,6 +55,7 @@ public class scr_spaceshipControls : MonoBehaviour
         //check for input from the fire key and make bullets
         if (Input.GetButtonDown("Fire1"))
         {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Bullet", GetComponent<Transform>().position);
             GameObject newBullet = Instantiate(bullet, transform.position, transform.rotation);
             newBullet.GetComponent<Rigidbody2D>().AddRelativeForce(Vector2.up * bulletForce);
             Destroy(newBullet, 5.0f);

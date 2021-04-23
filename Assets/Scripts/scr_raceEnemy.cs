@@ -51,6 +51,7 @@ public class scr_raceEnemy : MonoBehaviour
     {
         if (collision.gameObject.tag == "RedCoin")
         {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/EnemyGetCoin", GetComponent<Transform>().position);
             Destroy(collision.gameObject);
             enemyCount = enemyCount + 1;
             if (enemyCount < spawn.numToSpawn)

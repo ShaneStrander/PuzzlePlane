@@ -49,6 +49,7 @@ public class scr_TBCenemy : MonoBehaviour
     {
         Debug.Log("ENEMY Basic Attack");
         int damage = Random.Range(8, 13);
+        FMODUnity.RuntimeManager.PlayOneShot("event:/PlayerHitByBasic", GetComponent<Transform>().position);
         GameObject.Find("TBCplayer").GetComponent<scr_TBC>().TakeDamage(damage);
     }
 
@@ -58,18 +59,21 @@ public class scr_TBCenemy : MonoBehaviour
         if (accuracy < 4)
         {
             Debug.Log("ENEMY Magic Attack");
+            FMODUnity.RuntimeManager.PlayOneShot("event:/PlayerHitByMagic", GetComponent<Transform>().position);
             int damage = Random.Range(13, 17);
             GameObject.Find("TBCplayer").GetComponent<scr_TBC>().TakeDamage(damage);
         }
         else
         {
             Debug.Log("ENEMY Miss!");
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Enemy", GetComponent<Transform>().position);
         }
 
     }
 
     public void EnemyHeal()
     {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/EnemyHeal", GetComponent<Transform>().position);
         Debug.Log("Enemy Heals");
         enemyCurrentHealth += 11;
         enemyHealthBar.SetHealth(enemyCurrentHealth);

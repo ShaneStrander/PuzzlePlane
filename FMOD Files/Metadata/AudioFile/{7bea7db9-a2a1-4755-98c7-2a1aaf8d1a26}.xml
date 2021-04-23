@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{7bea7db9-a2a1-4755-98c7-2a1aaf8d1a26}">
+		<property name="assetPath">
+			<value>sfxBullet2.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.87501133786848073</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{8709536e-3ef8-40e3-a1bf-6a2eb4e6b3da}</destination>
+		</relationship>
+	</object>
+</objects>

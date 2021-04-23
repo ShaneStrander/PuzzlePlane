@@ -41,6 +41,7 @@ public class scr_carSteering : MonoBehaviour
     {
         if (collision.gameObject.tag == "BlueCoin")
         {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/PlayerGetCoin", GetComponent<Transform>().position);
             Destroy(collision.gameObject);
             count = count + 1;
             if(count < spawn.numToSpawn)

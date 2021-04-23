@@ -76,6 +76,7 @@ public class scr_asteroidScript : MonoBehaviour
     {
         if (other.CompareTag("bullet"))
         {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/AsteroidHit", GetComponent<Transform>().position);
             Destroy(other.gameObject);
 
             if(asteroidSize == 2)
