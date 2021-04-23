@@ -119,6 +119,7 @@ public class scr_TBCenemy : MonoBehaviour
     public void EnemyBasicAttack()
     {
         int damage = Random.Range(8, 13);
+        FMODUnity.RuntimeManager.PlayOneShot("event:/PlayerHitByBasic", GetComponent<Transform>().position);
         GameObject.Find("TBCplayer").GetComponent<scr_TBC>().TakeDamage(damage);
         txt.text = "The enemy's basic attack dealt " + damage.ToString() + " damage";
         attacking = true;
@@ -129,6 +130,7 @@ public class scr_TBCenemy : MonoBehaviour
         int accuracy = Random.Range(1, 6);
         if (accuracy < 4)
         {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/PlayerHitByMagic", GetComponent<Transform>().position);
             int damage = Random.Range(13, 17);
             GameObject.Find("TBCplayer").GetComponent<scr_TBC>().TakeDamage(damage);
             txt.text = "The enemy's magic attack dealt " + damage.ToString() + " damage";
@@ -136,6 +138,8 @@ public class scr_TBCenemy : MonoBehaviour
         }
         else
         {
+
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Enemy", GetComponent<Transform>().position);
             txt.text = "The enemy misses!";
         }
 
@@ -143,7 +147,7 @@ public class scr_TBCenemy : MonoBehaviour
 
     public void EnemyHeal()
     {
-        
+        FMODUnity.RuntimeManager.PlayOneShot("event:/EnemyHeal", GetComponent<Transform>().position);
         enemyCurrentHealth += 11;
         enemyHealthBar.SetHealth(enemyCurrentHealth);
         txt.text = "The enemy heals for 11 points!";

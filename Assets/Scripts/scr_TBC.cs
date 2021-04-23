@@ -116,6 +116,7 @@ public class scr_TBC : MonoBehaviour
     {
         if (turn % 2 == 0)
         {
+            FMODUnity.RuntimeManager.PlayOneShot("event:/EnemyHitByBasic", GetComponent<Transform>().position);
             int damage = Random.Range(8, 13);
             enemy.EnemyTakeDamage(damage);
             turn = turn + 1;
@@ -132,6 +133,8 @@ public class scr_TBC : MonoBehaviour
             int accuracy = Random.Range(1, 6);
             if(accuracy < 4)
             {
+
+                FMODUnity.RuntimeManager.PlayOneShot("event:/EnemyHitByMagic", GetComponent<Transform>().position);
                 int damage = Random.Range(13, 17);
                 enemy.EnemyTakeDamage(damage);
                 txt.text = "Your magic attack dealt " + damage.ToString() + " damage!";
@@ -139,6 +142,7 @@ public class scr_TBC : MonoBehaviour
             }
             else
             {
+                FMODUnity.RuntimeManager.PlayOneShot("event:/PlayerMiss", GetComponent<Transform>().position);
                 txt.text = "Your magic attack missed!";
             }
             turn = turn + 1;
@@ -150,6 +154,8 @@ public class scr_TBC : MonoBehaviour
     {
         if (turn % 2 == 0)
         {
+
+            FMODUnity.RuntimeManager.PlayOneShot("event:/PlayerHeal", GetComponent<Transform>().position);
             currentHealth += 11;
             healthBar.SetHealth(currentHealth);
             turn = turn + 1;
