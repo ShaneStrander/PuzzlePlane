@@ -17,6 +17,8 @@ public class scr_playerMovement : MonoBehaviour
     float minScale = 0.75f;
     float maxScale = 0.8f;
 
+    private bool useKeyWasPressed;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -48,6 +50,15 @@ public class scr_playerMovement : MonoBehaviour
             scaleRate = -Mathf.Abs(scaleRate);
         }
 
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            useKeyWasPressed = true;
+        }
+        else
+        {
+            useKeyWasPressed = false;
+        }
+
     }
 
     private void FixedUpdate()
@@ -73,6 +84,68 @@ public class scr_playerMovement : MonoBehaviour
         }*/
 
 
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Blue Orb")
+        {
+            collision.GetComponent<BlueOrb>().TextFadeIn();
+        }
+        else if (collision.tag == "Dialogue")
+        {
+            collision.GetComponent<DialogueController>().TextFadeIn();
+        }
+        
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.tag == "Blue Orb")
+        {
+            // Do blue orb stuff
+            BlueOrb blueOrb = collision.GetComponent<BlueOrb>();
+
+            if (useKeyWasPressed)
+            {
+                if (!blueOrb.boxIsOpen)
+                {
+                    blueOrb.OpenDialogueBox();
+                }
+                else
+                {
+                    blueOrb.CloseDialogueBox();
+                }
+            }
+        }
+        else if (collision.tag == "Dialogue")
+        {
+            // Do dialogue stuff
+            DialogueController dialogue = collision.GetComponent<DialogueController>();
+
+            if (useKeyWasPressed)
+            {
+                dialogue.PressE();
+            }
+        }
+        
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Blue Orb" || collision.tag == "Dialogue" )
+        {
+            collision.GetComponent<UseOrbs>().TextFadeOut();
+
+            if (collision.tag == "Blue Orb" && collision.GetComponent<BlueOrb>().boxIsOpen)
+            {
+                collision.GetComponent<BlueOrb>().CloseDialogueBox();
+            }
+            else if (collision.tag == "Dialogue" && collision.GetComponent<DialogueController>().boxIsOpen)
+            {
+                collision.GetComponent<DialogueController>().CloseDialogueBox();
+            }
+        }
     }
 }
 

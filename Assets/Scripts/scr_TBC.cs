@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 
 public class scr_TBC : MonoBehaviour
@@ -11,44 +12,95 @@ public class scr_TBC : MonoBehaviour
     public int currentHealth;
     public scr_healthBar healthBar;
 
-    int turn = 0;
+    //Turn Counter
+    public int turn = 0;
+
+    //For Updating PlayByPlay
+    public Text txt;
+
+    //Scaling for animations
+    float scaleRate = 0.15f;
+    float minScale = 0.5f;
+    float maxScale = 0.8f;
+
+    //Was damage dealt
+    bool damageDealt = false;
+    bool attacking = false;
 
     scr_TBCenemy enemy;
-    
+
+
     void Start()
     {
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
         enemy = GameObject.Find("Enemy").GetComponent<scr_TBCenemy>();
+        txt.text = "Make a move!";
     }
 
     void Update()
     {
-        if(currentHealth >= 0 && enemy.enemyCurrentHealth >= 0)
+        if (transform.localScale.x < minScale)
         {
-            if(turn % 2 != 0)
+            scaleRate = Mathf.Abs(scaleRate);
+        }
+        else if (transform.localScale.x > maxScale)
+        {
+            scaleRate = -Mathf.Abs(scaleRate);
+        }
+
+        if (currentHealth >= 0 && enemy.enemyCurrentHealth >= 0)
+        {
+            if (turn % 2 != 0)
             {
                 enemy.ChooseEnemyMove();
-                turn = turn + 1;
             }
         }
         else
         {
-            if(currentHealth >= 0)
+            if (currentHealth >= 0)
             {
-                Debug.Log("PLAYER WINS");
+                txt.text = "You Win!";
                 FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Minigame", 0);
                 FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Progress", 1);
                 SceneManager.LoadScene("Scene3");
             }
             else
             {
-                Debug.Log("ENEMY WINS");
+                txt.text = "You Lose!";
                 FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Minigame", 0);
                 SceneManager.LoadScene("Scene2");
             }
         }
-        
+
+    }
+
+    //Animation Helper
+    void FixedUpdate()
+    {
+        //Taking damage
+        if (damageDealt)
+        {
+            transform.localScale += new Vector3(.5f, .5f, .5f) * scaleRate;
+            if (transform.localScale.y < minScale)
+            {
+                damageDealt = false;
+            }
+        }
+
+        //Attacking
+        if (attacking)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, new Vector3(-4f, 0f, 0f), 8 * Time.deltaTime);
+            if (transform.position.x >= -4f)
+            {
+                attacking = false;
+            }
+        }
+        else
+        {
+            transform.position = Vector3.MoveTowards(transform.position, new Vector3(-5f, 0f, 0f), 8 * Time.deltaTime);
+        }
     }
 
     // Takes damage and updates health bar
@@ -56,6 +108,7 @@ public class scr_TBC : MonoBehaviour
     {
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
+        damageDealt = true;
     }
 
     //Basic attack
@@ -63,11 +116,12 @@ public class scr_TBC : MonoBehaviour
     {
         if (turn % 2 == 0)
         {
-            Debug.Log("PLAYER Attacks");
             FMODUnity.RuntimeManager.PlayOneShot("event:/EnemyHitByBasic", GetComponent<Transform>().position);
             int damage = Random.Range(8, 13);
             enemy.EnemyTakeDamage(damage);
             turn = turn + 1;
+            txt.text = "Your basic attack dealt " + damage.ToString() + " damage!";
+            attacking = true;
         }
     }
 
@@ -79,15 +133,17 @@ public class scr_TBC : MonoBehaviour
             int accuracy = Random.Range(1, 6);
             if(accuracy < 4)
             {
-                Debug.Log("PLAYER Magic Attack");
+
                 FMODUnity.RuntimeManager.PlayOneShot("event:/EnemyHitByMagic", GetComponent<Transform>().position);
                 int damage = Random.Range(13, 17);
                 enemy.EnemyTakeDamage(damage);
+                txt.text = "Your magic attack dealt " + damage.ToString() + " damage!";
+                attacking = true;
             }
             else
             {
                 FMODUnity.RuntimeManager.PlayOneShot("event:/PlayerMiss", GetComponent<Transform>().position);
-                Debug.Log("PLAYER Miss!");
+                txt.text = "Your magic attack missed!";
             }
             turn = turn + 1;
         }
@@ -98,11 +154,12 @@ public class scr_TBC : MonoBehaviour
     {
         if (turn % 2 == 0)
         {
-            Debug.Log("PLAYER Heals");
+
             FMODUnity.RuntimeManager.PlayOneShot("event:/PlayerHeal", GetComponent<Transform>().position);
             currentHealth += 11;
             healthBar.SetHealth(currentHealth);
             turn = turn + 1;
+            txt.text = "You healed yourself for 11 points!";
         }
     }
 

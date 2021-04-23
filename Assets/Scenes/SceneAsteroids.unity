@@ -717,19 +717,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 973868862}
-  thrust: 1
+  thrust: 2
   turnThrust: 90
   screenTop: 11
   screenBottom: -11
   screenLeft: -18
   screenRight: 18
-  bulletForce: 200
+  bulletForce: 400
   deathForce: 0
   bullet: {fileID: 3477436588953104793, guid: 78e47d29aa09d2c4190dead288313ad9, type: 3}
   lives: 3
+  scoreText: {fileID: 0}
   livesText: {fileID: 1709129296}
-  accPower: 5
-  steeringPower: 5
 --- !u!70 &973868866
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

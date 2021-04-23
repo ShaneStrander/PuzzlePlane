@@ -2,13 +2,12 @@
 [LOG] Manager::init                            : maxchannels = 256 studioflags = 00000006 flags 00000000 extradriverdata 0000000000000000.
 [LOG] SystemI::init                            : Initialize version=20107 (113487), maxchannels=256, flags=0x00020000
 [LOG] SystemI::setOutputInternal               : Setting output to 'FMOD WASAPI Output'
-[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=2, nSamplesPerSec=44100, nAvgBytesPerSec=352800, nBlockAlign=8, wBitsPerSample=32, cbSize=22.
+[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=2, nSamplesPerSec=48000, nAvgBytesPerSec=384000, nBlockAlign=8, wBitsPerSample=32, cbSize=22.
 [LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEXTENSIBLE): wValidBitsPerSample=32, dwChannelMask=0x00000003, SubFormat=00000003-0000-0010-8000-00AA00389B71.
-[LOG] OutputWASAPI::init                       : Output buffer size: 3760 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
-[LOG] SystemI::init                            : Output requires a sample rate of 44100Hz, resampling will occur.
+[LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x8000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 00000206B353C668 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 000002510D930A48 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -20,9 +19,282 @@
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] SystemI::createSound                     : filename = FMOD Files\Build\Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002510CF5DF38 : node = 000002510D836340
+[LOG] SystemI::createSound                     : add node to async list : head = 000002510D2FDA48.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002510CF5DF38
+[LOG] SystemI::createSound                     : filename = FMOD Files\Build\Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD Files\Build\Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSound                     :     setdata soundi = 000002510CF5A428 : node = 000002510D8365C0
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 8078400
+[LOG] SystemI::createSound                     :     add node to async list : head = 000002510D2FDA48.  list count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 23840
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002510D836450
+[LOG] SystemI::createSound                     :     filename = FMOD Files\Build\Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSound                     :     setdata soundi = 000002510CF5C288 : node = 000002510D836700
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSound                     :     add node to async list : head = 000002510D2FDA48.  list count = 1
+[LOG] SystemI::createSound                     :     filename = FMOD Files\Build\Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 000002510CF600F8 : node = 000002510D836480
+[LOG] SystemI::createSound                     :     add node to async list : head = 000002510D2FDA48.  list count = 2
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='asteroids theme', format=5, channels=2, frequency=48000, lengthbytes=695456, lengthpcm=2880000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.178223.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002510CF5DF38
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002510CF5A428
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD Files\Build\Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 8078400
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 23840
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002510D8366D0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='asteroids theme', format=5, channels=2, frequency=48000, lengthbytes=695456, lengthpcm=2880000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.178223.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002510CF5A428
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002510CF5C288
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD Files\Build\Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 8078400
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 23840
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002510D836810
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='asteroids theme', format=5, channels=2, frequency=48000, lengthbytes=695456, lengthpcm=2880000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.178223.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002510CF5C288
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002510CF600F8
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD Files\Build\Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 8078400
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 23840
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002510D836590
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='asteroids theme', format=5, channels=2, frequency=48000, lengthbytes=695456, lengthpcm=2880000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.178223.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002510CF600F8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002510CF61388
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002510CF61388
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002510CF5FD98
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002510CF5FD98
+[LOG] SoundI::release                          : puzzle plane level theme updated (000002510CF5BBC8)
+[LOG] SoundI::release                          :     puzzle plane level theme updated (00000250C3D3F878)
+[LOG] SoundI::release                          :     puzzle plane level theme updated (000002510CF5C0D8)
+[LOG] SoundI::release                          : puzzle plane level theme updated (progress 1) (000002510CF5D008)
+[LOG] SoundI::release                          :     puzzle plane level theme updated (progress 1) (00000250C3D3F538)
+[LOG] SoundI::release                          :     puzzle plane level theme updated (progress 1) (000002510CF5B868)
+[LOG] SoundI::release                          : puzzle plane level theme updated (progress 2) (000002510CF5E298)
+[LOG] SoundI::release                          :     puzzle plane level theme updated (progress 2) (00000250C3D3E1B8)
+[LOG] SoundI::release                          :     puzzle plane level theme updated (progress 2) (000002510CF5AAE8)
+[LOG] SoundI::release                          : puzzle plane level theme updated (no progress) (000002510CF5A5D8)
+[LOG] SoundI::release                          :     puzzle plane level theme updated (no progress) (00000250C3D3DB38)
+[LOG] SoundI::release                          :     puzzle plane level theme updated (no progress) (000002510CF5E448)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002510CF60B18
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002510CF60B18
+[LOG] SystemI::createSound                     : filename = FMOD Files\Build\Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002510CF5E448 : node = 000002510D836200
+[LOG] SystemI::createSound                     : add node to async list : head = 000002510D2FDA48.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002510CF5E448
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD Files\Build\Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSound                     : filename = FMOD Files\Build\Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 8078400
+[LOG] SystemI::createSound                     :     setdata soundi = 000002510CF5F1C8 : node = 000002510D8360C0
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 23840
+[LOG] SystemI::createSound                     :     add node to async list : head = 000002510D2FDA48.  list count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002510D836310
+[LOG] SystemI::createSound                     :     filename = FMOD Files\Build\Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSound                     :     setdata soundi = 000002510CF5AAE8 : node = 00000250C165DE70
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSound                     :     add node to async list : head = 000002510D2FDA48.  list count = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 52000
+[LOG] SystemI::createSound                     :     filename = FMOD Files\Build\Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 000002510CF5DD88 : node = 00000250C165D0B0
+[LOG] SystemI::createSound                     :     add node to async list : head = 000002510D2FDA48.  list count = 2
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='puzzle plane level theme updated (no progress)', format=5, channels=2, frequency=48000, lengthbytes=1552480, lengthpcm=6336000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.244812.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002510CF5E448
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002510CF5F1C8
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD Files\Build\Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 8078400
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 23840
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002510D8361D0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 52000
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='puzzle plane level theme updated (progress 2)', format=5, channels=2, frequency=48000, lengthbytes=1581152, lengthpcm=6336000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.246765.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002510CF5F1C8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002510CF5AAE8
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD Files\Build\Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 8078400
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 23840
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000250C165DF80
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 52000
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='puzzle plane level theme updated (progress 1)', format=5, channels=2, frequency=48000, lengthbytes=1558592, lengthpcm=6336000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.254700.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002510CF5AAE8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002510CF5DD88
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD Files\Build\Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 8078400
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 23840
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000250C165D1C0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 52000
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='puzzle plane level theme updated', format=5, channels=2, frequency=48000, lengthbytes=1580896, lengthpcm=6336000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.339111.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002510CF5DD88
+[LOG] SoundI::release                          : asteroids theme (000002510CF600F8)
+[LOG] SoundI::release                          :     asteroids theme (00000250C3D3F6D8)
+[LOG] SoundI::release                          :     asteroids theme (000002510CF5FD98)
+[LOG] SoundI::release                          : asteroids theme (000002510CF5C288)
+[LOG] SoundI::release                          :     asteroids theme (00000250C3D3CAF8)
+[LOG] SoundI::release                          :     asteroids theme (000002510CF61538)
+[LOG] SoundI::release                          : asteroids theme (000002510CF5DF38)
+[LOG] SoundI::release                          :     asteroids theme (00000250C3D3DE78)
+[LOG] SoundI::release                          :     asteroids theme (000002510CF61388)
+[LOG] SoundI::release                          : asteroids theme (000002510CF5A428)
+[LOG] SoundI::release                          :     asteroids theme (00000250C3D3FA18)
+[LOG] SoundI::release                          :     asteroids theme (000002510CF60B18)
+[LOG] SystemI::createSound                     : filename = FMOD Files\Build\Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002510CF5A428 : node = 00000250C165D5B0
+[LOG] SystemI::createSound                     : add node to async list : head = 000002510D2FDA48.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002510CF5A428
+[LOG] SystemI::createSound                     : filename = FMOD Files\Build\Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD Files\Build\Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSound                     :     setdata soundi = 000002510CF5B1A8 : node = 00000250C165D1F0
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 8078400
+[LOG] SystemI::createSound                     :     add node to async list : head = 000002510D2FDA48.  list count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 23840
+[LOG] SystemI::createSound                     :     filename = FMOD Files\Build\Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000250C165D6C0
+[LOG] SystemI::createSound                     :     setdata soundi = 000002510CF5ECB8 : node = 00000250C165DD30
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSound                     :     add node to async list : head = 000002510D2FDA48.  list count = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSound                     :     filename = FMOD Files\Build\Desktop/Music.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     :     setdata soundi = 000002510CF5FA38 : node = 00000250C165D330
+[LOG] SystemI::createSound                     :     add node to async list : head = 000002510D2FDA48.  list count = 2
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='TBC theme', format=5, channels=2, frequency=48000, lengthbytes=314880, lengthpcm=1152000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.438080.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002510CF5A428
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002510CF5B1A8
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD Files\Build\Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 8078400
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 23840
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000250C165D300
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='TBC theme', format=5, channels=2, frequency=48000, lengthbytes=314880, lengthpcm=1152000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.438080.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002510CF5B1A8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002510CF5ECB8
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD Files\Build\Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 8078400
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 23840
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000250C165DE40
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='TBC theme', format=5, channels=2, frequency=48000, lengthbytes=314880, lengthpcm=1152000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.438080.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002510CF5ECB8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002510CF5FA38
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD Files\Build\Desktop/Music.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 8078400
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 23840
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000250C165D440
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='TBC theme', format=5, channels=2, frequency=48000, lengthbytes=314880, lengthpcm=1152000, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.438080.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002510CF5FA38
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] SoundI::release                          : puzzle plane level theme updated (000002510CF5DD88)
+[LOG] SoundI::release                          :     puzzle plane level theme updated (00000250C3D3F1F8)
+[LOG] SoundI::release                          :     puzzle plane level theme updated (000002510CF61A48)
+[LOG] SoundI::release                          : puzzle plane level theme updated (progress 2) (000002510CF5F1C8)
+[LOG] SoundI::release                          :     puzzle plane level theme updated (progress 2) (00000250C3D3FD58)
+[LOG] SoundI::release                          :     puzzle plane level theme updated (progress 2) (000002510CF5F378)
+[LOG] SoundI::release                          : puzzle plane level theme updated (no progress) (000002510CF5E448)
+[LOG] SoundI::release                          :     puzzle plane level theme updated (no progress) (00000250C3D3F058)
+[LOG] SoundI::release                          :     puzzle plane level theme updated (no progress) (000002510CF5E298)
+[LOG] SoundI::release                          : puzzle plane level theme updated (progress 1) (000002510CF5AAE8)
+[LOG] SoundI::release                          :     puzzle plane level theme updated (progress 1) (00000250C3D3FBB8)
+[LOG] SoundI::release                          :     puzzle plane level theme updated (progress 1) (000002510CF61028)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] SoundI::release                          :  (000002510D850828)
+[LOG] SoundI::release                          :     Racing theme (00000250C3D3C7B8)
+[LOG] SoundI::release                          : TBC theme (000002510CF5FA38)
+[LOG] SoundI::release                          :     TBC theme (00000250C3D3F538)
+[LOG] SoundI::release                          :     TBC theme (000002510CF600F8)
+[LOG] SoundI::release                          : TBC theme (000002510CF5ECB8)
+[LOG] SoundI::release                          :     TBC theme (00000250C3D3E838)
+[LOG] SoundI::release                          :     TBC theme (000002510CF5FF48)
+[LOG] SoundI::release                          : TBC theme (000002510CF5B1A8)
+[LOG] SoundI::release                          :     TBC theme (00000250C3D3F398)
+[LOG] SoundI::release                          :     TBC theme (000002510CF616E8)
+[LOG] SoundI::release                          : TBC theme (000002510CF5A428)
+[LOG] SoundI::release                          :     TBC theme (00000250C3D3F6D8)
+[LOG] SoundI::release                          :     TBC theme (000002510CF61388)
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] SystemI::close                           : Closed.
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
@@ -31,3 +303,5 @@
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
 [LOG] SystemI::close                           : Closed.
+[LOG] Thread::callback                         : FMOD nonblocking thread (0) finished.
+[LOG] Thread::callback                         : FMOD file thread finished.
