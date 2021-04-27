@@ -95,7 +95,6 @@
 	</object>
 	<object class="MultiSound" id="{426e6f0c-77d1-42e3-b66e-ca7fbbf7e55e}">
 		<relationship name="sounds">
-			<destination>{4e38c4b9-48f5-44cd-b16a-76ab9a14418a}</destination>
 			<destination>{73a6180b-7058-4075-a5f0-cbab9a90e398}</destination>
 		</relationship>
 	</object>
@@ -129,17 +128,12 @@
 			<value>70</value>
 		</property>
 	</object>
-	<object class="SilenceSound" id="{4e38c4b9-48f5-44cd-b16a-76ab9a14418a}">
-		<property name="duration">
-			<value>250</value>
-		</property>
-	</object>
 	<object class="SingleSound" id="{73a6180b-7058-4075-a5f0-cbab9a90e398}">
 		<property name="startOffset">
-			<value>15</value>
+			<value>20.5</value>
 		</property>
 		<property name="pitch">
-			<value>8.5</value>
+			<value>2.4000001</value>
 		</property>
 		<relationship name="audioFile">
 			<destination>{ed6b634a-f4be-45c6-ba3f-1e2dece69a39}</destination>
