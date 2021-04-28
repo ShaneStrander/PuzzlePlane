@@ -965,22 +965,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8753879064515037736, guid: 9eaefbbb62c870044ad906b1bc4c4845, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.04519248
-      objectReference: {fileID: 0}
-    - target: {fileID: 8753879064515037736, guid: 9eaefbbb62c870044ad906b1bc4c4845, type: 3}
-      propertyPath: m_Size.x
-      value: 4.4489346
-      objectReference: {fileID: 0}
-    - target: {fileID: 8753879064515037736, guid: 9eaefbbb62c870044ad906b1bc4c4845, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.6531923
-      objectReference: {fileID: 0}
-    - target: {fileID: 8753879064515037736, guid: 9eaefbbb62c870044ad906b1bc4c4845, type: 3}
-      propertyPath: m_Size.y
-      value: 2.0928578
-      objectReference: {fileID: 0}
     - target: {fileID: 8753879064515037742, guid: 9eaefbbb62c870044ad906b1bc4c4845, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.3
@@ -1028,18 +1012,6 @@ PrefabInstance:
     - target: {fileID: 8753879064515037743, guid: 9eaefbbb62c870044ad906b1bc4c4845, type: 3}
       propertyPath: m_Name
       value: Bit
-      objectReference: {fileID: 0}
-    - target: {fileID: 8753879065382739189, guid: 9eaefbbb62c870044ad906b1bc4c4845, type: 3}
-      propertyPath: m_Color.r
-      value: 0.509434
-      objectReference: {fileID: 0}
-    - target: {fileID: 8753879065382739189, guid: 9eaefbbb62c870044ad906b1bc4c4845, type: 3}
-      propertyPath: m_Color.g
-      value: 0.2047348
-      objectReference: {fileID: 0}
-    - target: {fileID: 8753879065382739189, guid: 9eaefbbb62c870044ad906b1bc4c4845, type: 3}
-      propertyPath: m_Color.b
-      value: 0.2047348
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9eaefbbb62c870044ad906b1bc4c4845, type: 3}
