@@ -139,7 +139,7 @@ public class scr_TBCenemy : MonoBehaviour
         else
         {
 
-            FMODUnity.RuntimeManager.PlayOneShot("event:/Enemy", GetComponent<Transform>().position);
+            FMODUnity.RuntimeManager.PlayOneShot("event:/EnemyMiss", GetComponent<Transform>().position);
             txt.text = "The enemy misses!";
         }
 

@@ -131,8 +131,14 @@
 		</property>
 	</object>
 	<object class="SingleSound" id="{3574dfa3-a817-4962-b77b-fd3d15af39ed}">
+		<property name="startOffset">
+			<value>1</value>
+		</property>
 		<property name="volume">
-			<value>-6</value>
+			<value>-2</value>
+		</property>
+		<property name="pitch">
+			<value>-2</value>
 		</property>
 		<relationship name="audioFile">
 			<destination>{6baf61f2-7f2e-406c-a9da-0f1a37061bb8}</destination>
