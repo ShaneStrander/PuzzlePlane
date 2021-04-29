@@ -720,6 +720,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8753879064515037736, guid: 9eaefbbb62c870044ad906b1bc4c4845, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.51140237
+      objectReference: {fileID: 0}
+    - target: {fileID: 8753879064515037736, guid: 9eaefbbb62c870044ad906b1bc4c4845, type: 3}
+      propertyPath: m_Size.x
+      value: 3.5165153
+      objectReference: {fileID: 0}
     - target: {fileID: 8753879064515037737, guid: 9eaefbbb62c870044ad906b1bc4c4845, type: 3}
       propertyPath: sentences.Array.size
       value: 3

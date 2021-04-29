@@ -195,7 +195,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Accuracy:   100%
 
-    Damage:     8 - 12'
+    Damage:     15-20'
 --- !u!222 &130679713
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1162,7 +1162,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Accuracy:   60%
 
-    Damage: 13 - 16'
+    Damage:   22-26'
 --- !u!222 &831681888
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1918,7 +1918,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Heals:   11'
+  m_Text: 'Heals:   18'
 --- !u!222 &1596984796
 CanvasRenderer:
   m_ObjectHideFlags: 0

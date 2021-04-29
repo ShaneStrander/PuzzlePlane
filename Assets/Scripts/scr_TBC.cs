@@ -117,7 +117,7 @@ public class scr_TBC : MonoBehaviour
         if (turn % 2 == 0)
         {
             FMODUnity.RuntimeManager.PlayOneShot("event:/EnemyHitByBasic", GetComponent<Transform>().position);
-            int damage = Random.Range(8, 13);
+            int damage = Random.Range(15, 21);
             enemy.EnemyTakeDamage(damage);
             turn = turn + 1;
             txt.text = "Your basic attack dealt " + damage.ToString() + " damage!";
@@ -135,7 +135,7 @@ public class scr_TBC : MonoBehaviour
             {
 
                 FMODUnity.RuntimeManager.PlayOneShot("event:/EnemyHitByMagic", GetComponent<Transform>().position);
-                int damage = Random.Range(13, 17);
+                int damage = Random.Range(22, 27);
                 enemy.EnemyTakeDamage(damage);
                 txt.text = "Your magic attack dealt " + damage.ToString() + " damage!";
                 attacking = true;
@@ -156,10 +156,10 @@ public class scr_TBC : MonoBehaviour
         {
 
             FMODUnity.RuntimeManager.PlayOneShot("event:/PlayerHeal", GetComponent<Transform>().position);
-            currentHealth += 11;
+            currentHealth += 18;
             healthBar.SetHealth(currentHealth);
             turn = turn + 1;
-            txt.text = "You healed yourself for 11 points!";
+            txt.text = "You healed yourself for 18 points!";
         }
     }
 
