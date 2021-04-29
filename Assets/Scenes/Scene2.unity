@@ -713,6 +713,91 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1298522253
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8753879064515037737, guid: 9eaefbbb62c870044ad906b1bc4c4845, type: 3}
+      propertyPath: sentences.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8753879064515037737, guid: 9eaefbbb62c870044ad906b1bc4c4845, type: 3}
+      propertyPath: sentences.Array.data[0]
+      value: The lights are on!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8753879064515037737, guid: 9eaefbbb62c870044ad906b1bc4c4845, type: 3}
+      propertyPath: sentences.Array.data[2]
+      value: 'Maybe if I go to bed, I will wake up from this dream '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8753879064515037737, guid: 9eaefbbb62c870044ad906b1bc4c4845, type: 3}
+      propertyPath: sentences.Array.data[1]
+      value: This looks like my room... but where is the rest?  ?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8753879064515037742, guid: 9eaefbbb62c870044ad906b1bc4c4845, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8753879064515037742, guid: 9eaefbbb62c870044ad906b1bc4c4845, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.9999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 8753879064515037742, guid: 9eaefbbb62c870044ad906b1bc4c4845, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.32457647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8753879064515037742, guid: 9eaefbbb62c870044ad906b1bc4c4845, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8753879064515037742, guid: 9eaefbbb62c870044ad906b1bc4c4845, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8753879064515037742, guid: 9eaefbbb62c870044ad906b1bc4c4845, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8753879064515037742, guid: 9eaefbbb62c870044ad906b1bc4c4845, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8753879064515037742, guid: 9eaefbbb62c870044ad906b1bc4c4845, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8753879064515037742, guid: 9eaefbbb62c870044ad906b1bc4c4845, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8753879064515037742, guid: 9eaefbbb62c870044ad906b1bc4c4845, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8753879064515037742, guid: 9eaefbbb62c870044ad906b1bc4c4845, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8753879064515037743, guid: 9eaefbbb62c870044ad906b1bc4c4845, type: 3}
+      propertyPath: m_Name
+      value: Bit
+      objectReference: {fileID: 0}
+    - target: {fileID: 8753879065382739195, guid: 9eaefbbb62c870044ad906b1bc4c4845, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 23.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8753879065382739195, guid: 9eaefbbb62c870044ad906b1bc4c4845, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 45.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8753879065382739195, guid: 9eaefbbb62c870044ad906b1bc4c4845, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -36.7
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9eaefbbb62c870044ad906b1bc4c4845, type: 3}
 --- !u!1 &1304959375 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5711663814184559163, guid: d34230c9f2c2b2c469412ec38171e498, type: 3}

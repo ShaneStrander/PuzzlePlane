@@ -18591,6 +18591,71 @@ PrefabInstance:
       objectReference: {fileID: 1123673697}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e68ae77e4479094469c1dfb244c3b6e8, type: 3}
+--- !u!1001 &1780627606
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8753879064515037737, guid: 9eaefbbb62c870044ad906b1bc4c4845, type: 3}
+      propertyPath: sentences.Array.data[0]
+      value: 'That did not work! '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8753879064515037737, guid: 9eaefbbb62c870044ad906b1bc4c4845, type: 3}
+      propertyPath: sentences.Array.data[1]
+      value: My toy chest! Maybe I can find something helpful in it
+      objectReference: {fileID: 0}
+    - target: {fileID: 8753879064515037742, guid: 9eaefbbb62c870044ad906b1bc4c4845, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8753879064515037742, guid: 9eaefbbb62c870044ad906b1bc4c4845, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.9999998
+      objectReference: {fileID: 0}
+    - target: {fileID: 8753879064515037742, guid: 9eaefbbb62c870044ad906b1bc4c4845, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.32457647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8753879064515037742, guid: 9eaefbbb62c870044ad906b1bc4c4845, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8753879064515037742, guid: 9eaefbbb62c870044ad906b1bc4c4845, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8753879064515037742, guid: 9eaefbbb62c870044ad906b1bc4c4845, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8753879064515037742, guid: 9eaefbbb62c870044ad906b1bc4c4845, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8753879064515037742, guid: 9eaefbbb62c870044ad906b1bc4c4845, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8753879064515037742, guid: 9eaefbbb62c870044ad906b1bc4c4845, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8753879064515037742, guid: 9eaefbbb62c870044ad906b1bc4c4845, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8753879064515037742, guid: 9eaefbbb62c870044ad906b1bc4c4845, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8753879064515037743, guid: 9eaefbbb62c870044ad906b1bc4c4845, type: 3}
+      propertyPath: m_Name
+      value: Bit
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9eaefbbb62c870044ad906b1bc4c4845, type: 3}
 --- !u!1001 &1922941097
 PrefabInstance:
   m_ObjectHideFlags: 0
